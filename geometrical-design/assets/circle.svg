@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="124px" height="124px" viewBox="0 0 124 124" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>circle</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-336.000000, -44.000000)" fill-rule="nonzero" fill="#0000FF">
+            <path d="M398,156 C425.614237,156 448,133.614237 448,106 C448,78.3857625 425.614237,56 398,56 C370.385763,56 348,78.3857625 348,106 C348,133.614237 370.385763,156 398,156 Z M398,168 C363.758346,168 336,140.241654 336,106 C336,71.7583455 363.758346,44 398,44 C432.241654,44 460,71.7583455 460,106 C460,140.241654 432.241654,168 398,168 Z" id="circle" style="mix-blend-mode: multiply;"></path>
+        </g>
+    </g>
+</svg>
