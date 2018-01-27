@@ -29,14 +29,17 @@ body {
   font-size: 16px;
   overflow-x: hidden;
 }
-.page-content {
+.container {
   max-width: 90vw;
   margin: 0 auto;
 }
 @media only screen and (min-width: 970px) {
-  .page-content {
+  .container {
     max-width: 80vw;
   }
+}
+section.bg-white {
+  background-color: #ffffff;
 }
 nav {
   display: flex;
@@ -81,11 +84,11 @@ nav a.logo-title img {
   width: 100%;
   max-width: 570px;
   min-height: 400px;
-  height: calc(100vh - 260px);
+  height: calc(100vh - 240px);
 }
 .hero-section .shapes .circle {
   position: absolute;
-  top: 0;
+  top: 6vh;
   right: -55vw;
   mix-blend-mode: multiply;
   width: 60vh;
@@ -94,11 +97,14 @@ nav a.logo-title img {
   min-height: 400px;
   border-radius: 100%;
   border: 12px solid #0000FF;
+  transform: translateY(0);
+  transform: translateX(0);
+  animation: triangle ease 12s infinite;
 }
 .hero-section .shapes .square {
   position: absolute;
-  top: 32vh;
-  right: -12vw;
+  top: 40vh;
+  right: -20vw;
   mix-blend-mode: multiply;
   width: 25vh;
   height: 25vh;
@@ -106,22 +112,26 @@ nav a.logo-title img {
   min-height: 160px;
   border: 12px solid #FF0000;
   transform: rotate(25deg);
+  transform: translateY(0px);
+  transform: translateX(0);
+  animation: square ease 12s infinite;
 }
 .hero-section .shapes .triangle {
   position: absolute;
-  top: 0vh;
+  top: 4vh;
   right: -26vw;
   mix-blend-mode: multiply;
   transform: rotate(-15deg);
+  transform: translateY(0);
+  transform: translateX(0);
+  animation: triangle ease 12s infinite;
 }
 .btn-scroll {
   position: relative;
 }
 .btn-scroll a {
   position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  left: 0;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.13rem;
   font-weight: 600;
@@ -143,4 +153,51 @@ nav a.logo-title img {
 }
 .btn-scroll a:hover:before {
   bottom: 4px;
+}
+section.about {
+  margin-top: 80px;
+}
+.about-section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 400px;
+  height: 100vh;
+}
+.about-section .content {
+  width: 100%;
+  text-align: center;
+  max-width: 840px;
+  margin: auto;
+}
+footer {
+  height: 100px;
+}
+/* ----------------- Animations ----------------- */
+@keyframes square {
+  0%,
+  100% {
+    transform: rotate(25deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(18deg) translateY(-40px);
+  }
+}
+@keyframes triangle {
+  0%,
+  100% {
+    transform: rotate(-15deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(-8deg) translateY(-30px);
+  }
+}
+@keyframes circle {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
