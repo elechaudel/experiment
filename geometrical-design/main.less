@@ -30,7 +30,7 @@ out:  ./main.css, sourcemap: false, compress: false
 body {
   background-color: @light-grey;
   margin: 0;
-  font-size: 80%;
+  font-size: 75%;
   overflow-x: hidden;
 
   @media @md {
@@ -74,6 +74,12 @@ a {
   // -webkit-font-smoothing: antialiased;
   // -moz-osx-font-smoothing: grayscale;
   // box-sizing: border-box;
+}
+
+.above-fold {
+  // Prevent overflow on mobile browsers.
+  overflow-x: hidden;
+  height: 100vh;
 }
 
 .container {
@@ -187,7 +193,7 @@ nav {
     .triangle {
       position: absolute;
       top: 4vh;
-      right: -26vw;
+      right: -20vw;
       mix-blend-mode: multiply;
       transform: rotate(-15deg);
       transform: translateY(0);

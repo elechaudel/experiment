@@ -1,7 +1,7 @@
 body {
   background-color: #F8F8F8;
   margin: 0;
-  font-size: 80%;
+  font-size: 75%;
   overflow-x: hidden;
 }
 @media only screen and (min-width: 750px) {
@@ -34,6 +34,10 @@ p.subtitle {
 a {
   text-decoration: none;
   color: inherit;
+}
+.above-fold {
+  overflow-x: hidden;
+  height: 100vh;
 }
 .container {
   max-width: 90vw;
@@ -125,7 +129,7 @@ nav a.logo-title img {
 .hero-section .shapes .triangle {
   position: absolute;
   top: 4vh;
-  right: -26vw;
+  right: -20vw;
   mix-blend-mode: multiply;
   transform: rotate(-15deg);
   transform: translateY(0);
