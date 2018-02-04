@@ -53,6 +53,9 @@ a.btn-main {
 a.btn-main:hover {
   padding: 16px 24px;
 }
+.page-content {
+  overflow-x: hidden;
+}
 .above-fold {
   overflow-x: hidden;
   height: 100vh;
