@@ -1,6 +1,6 @@
 out:  ./main.css, sourcemap: false, compress: false
 
-// Colors
+// Main colors
 
 @white: #ffffff;
 @black: #000000;
@@ -8,6 +8,12 @@ out:  ./main.css, sourcemap: false, compress: false
 @primary-red: #FF0000;
 @primary-green: #008000;
 @primary-blue: #0000FF;
+
+// Three Graces colors
+
+@tg-gold: #CEB66D;
+@tg-red: #9C3023;
+@tg-blue: #172C5F;
 
 // Fonts
 
@@ -46,16 +52,21 @@ h1, h2, h3 {
 
 h1 {
   font-size: 3em;
-  font-weight: normal;
-  line-height: 1.5em;
+  font-weight: 500;
+  line-height: 1.4em;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-weight: 500;
 }
 
 
 p {
   font-family: @source-sans;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 34px;
+  line-height: 28px;
 
   &.subtitle {
     font-size: 1.4em;
@@ -66,6 +77,22 @@ p {
 a {
   text-decoration: none;
   color: inherit;
+  font-size: 18px;
+  font-family: @source-sans;
+  font-weight: 600;
+}
+
+a.btn-main {
+  padding: 16px;
+  border: 4px solid transparent;
+  border-image: linear-gradient(to right, @primary-red, @primary-blue, @primary-green) 1;
+  margin: 20px 0px;
+  display: inline-block;
+  transition: all 0.3s ease;
+
+  &:hover {
+    padding: 16px 24px;
+  }
 }
 
 // Main
@@ -132,7 +159,7 @@ nav {
       font-family: @garamond;
       font-size: 1.4em;
       line-height: 1.2em;
-      font-weight: normal;
+      font-weight: 400;
       margin: 0;
     }
 
@@ -147,7 +174,7 @@ nav {
   align-items: center;
   position: relative;
   width: 100%;
-  max-width: 570px;
+  max-width: 580px;
   min-height: 400px;
   height: ~"calc(100vh - 280px)";
 
@@ -295,22 +322,43 @@ nav {
   }
 }
 
-section.about {
+section.artworks {
   margin-top: 80px;
 }
 
-.about-section {
+.artwork-block {
   display: flex;
   align-items: center;
   width: 100%;
-  min-height: 400px;
-  height: 100vh;
 
   .content {
     width: 100%;
     text-align: center;
-    max-width: 840px;
+    max-width: 740px;
     margin: auto;
+    margin-top: 100px;
+    margin-bottom: 80px;
+  }
+
+  .square-img {
+    background-image: url(assets/artworks/three-graces.png);
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+    margin: auto;
+    margin-bottom: 60px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -12px;
+      top: -12px;
+      border: 12px solid @tg-gold;
+      height: 100%;
+      width: 100%;
+      transform: rotate(-15deg);
+    }
   }
 }
 
