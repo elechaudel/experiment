@@ -206,7 +206,7 @@ nav {
       transform: translateY(0);
       transform: translateX(0);
 
-      animation: triangle ease 12s infinite;
+      animation: circle ease 12s infinite;
     }
 
     .square {
@@ -259,7 +259,7 @@ nav {
         transform: translateY(0);
         transform: translateX(0);
 
-        animation: triangle ease 12s infinite;
+        animation: circle ease 12s infinite;
       }
 
       .square {
@@ -348,26 +348,52 @@ section.artworks {
     margin: auto;
     margin-top: 100px;
     margin-bottom: 80px;
+    position: relative;
   }
 
   .square-img {
-    background-image: url(assets/artworks/three-graces.png);
-    background-size: cover;
-    height: 250px;
-    width: 250px;
-    margin: auto;
-    margin-bottom: 60px;
-    position: relative;
 
-    &::before {
-      content: '';
-      position: absolute;
-      left: -12px;
-      top: -12px;
-      border: 12px solid @tg-gold;
-      height: 100%;
-      width: 100%;
-      transform: rotate(-15deg);
+    &#three-graces-img {
+      background-image: url(assets/artworks/three-graces.png);
+      background-size: cover;
+      height: 250px;
+      width: 250px;
+      margin: auto;
+      margin-bottom: 60px;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -12px;
+        top: -12px;
+        border: 12px solid @tg-gold;
+        height: 100%;
+        width: 100%;
+        transform: rotate(-15deg);
+        animation: sm-square ease 30s infinite;
+      }
+    }
+  }
+
+  .floating-shape {
+    position: absolute;
+
+    &.sm-triangle {
+      top: -40px;
+      right: 154px;
+      transform: rotate(15deg);
+      transform: translateY(0);
+      transform: translateX(0);
+      animation: sm-triangle ease 30s infinite;
+    }
+
+    &.sm-circle {
+      top: 140px;
+      left: 160px;
+      transform: translateY(0);
+      transform: translateX(0);
+      animation: sm-circle ease 30s infinite;
     }
   }
 }
@@ -377,8 +403,10 @@ footer {
 }
 
 
+/* ---------------------- */
 
-/* ----------------- Animations ----------------- */
+
+// Animations header shapes
 
 @keyframes square {
   0%,
@@ -394,7 +422,7 @@ footer {
 @keyframes triangle {
   0%,
   100% {
-    transform: rotate(-15deg) translateY(0px);
+    transform: rotate(-15deg) translateY(-40px);
   }
 
   50% {
@@ -409,6 +437,41 @@ footer {
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-30px);
+  }
+}
+
+// Animations artwork shapes
+
+@keyframes sm-square {
+  0%,
+  100% {
+    transform: rotate(-15deg);
+  }
+
+  50% {
+    transform: rotate(18deg);
+  }
+}
+
+@keyframes sm-triangle {
+  0%,
+  100% {
+    transform: rotate(15deg) translateY(0px);
+  }
+
+  50% {
+    transform: rotate(8deg) translateY(-30px);
+  }
+}
+
+@keyframes sm-circle {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(40px);
   }
 }

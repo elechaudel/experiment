@@ -137,7 +137,7 @@ nav a.logo-title img {
   border: 12px solid #0000FF;
   transform: translateY(0);
   transform: translateX(0);
-  animation: triangle ease 12s infinite;
+  animation: circle ease 12s infinite;
 }
 .hero-section .shapes .square {
   position: absolute;
@@ -178,7 +178,7 @@ nav a.logo-title img {
     border: 12px solid #0000FF;
     transform: translateY(0);
     transform: translateX(0);
-    animation: triangle ease 12s infinite;
+    animation: circle ease 12s infinite;
   }
   .hero-section .shapes .square {
     position: absolute;
@@ -249,8 +249,9 @@ section.artworks {
   margin: auto;
   margin-top: 100px;
   margin-bottom: 80px;
+  position: relative;
 }
-.artwork-block .square-img {
+.artwork-block .square-img#three-graces-img {
   background-image: url(assets/artworks/three-graces.png);
   background-size: cover;
   height: 250px;
@@ -259,7 +260,7 @@ section.artworks {
   margin-bottom: 60px;
   position: relative;
 }
-.artwork-block .square-img::before {
+.artwork-block .square-img#three-graces-img::before {
   content: '';
   position: absolute;
   left: -12px;
@@ -268,11 +269,30 @@ section.artworks {
   height: 100%;
   width: 100%;
   transform: rotate(-15deg);
+  animation: sm-square ease 30s infinite;
+}
+.artwork-block .floating-shape {
+  position: absolute;
+}
+.artwork-block .floating-shape.sm-triangle {
+  top: -40px;
+  right: 154px;
+  transform: rotate(15deg);
+  transform: translateY(0);
+  transform: translateX(0);
+  animation: sm-triangle ease 30s infinite;
+}
+.artwork-block .floating-shape.sm-circle {
+  top: 140px;
+  left: 160px;
+  transform: translateY(0);
+  transform: translateX(0);
+  animation: sm-circle ease 30s infinite;
 }
 footer {
   height: 100px;
 }
-/* ----------------- Animations ----------------- */
+/* ---------------------- */
 @keyframes square {
   0%,
   100% {
@@ -285,7 +305,7 @@ footer {
 @keyframes triangle {
   0%,
   100% {
-    transform: rotate(-15deg) translateY(0px);
+    transform: rotate(-15deg) translateY(-40px);
   }
   50% {
     transform: rotate(-8deg) translateY(-30px);
@@ -297,6 +317,33 @@ footer {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-30px);
+  }
+}
+@keyframes sm-square {
+  0%,
+  100% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(18deg);
+  }
+}
+@keyframes sm-triangle {
+  0%,
+  100% {
+    transform: rotate(15deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(8deg) translateY(-30px);
+  }
+}
+@keyframes sm-circle {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(40px);
   }
 }
