@@ -60,6 +60,11 @@ a.btn-main {
 a.btn-main:hover {
   padding: 16px 24px;
 }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 .page-content {
   overflow-x: hidden;
 }
@@ -93,13 +98,13 @@ nav li:not(:first-child) {
   margin-left: 40px;
 }
 nav li a {
-  color: inherit;
+  color: #808080;
   text-decoration: none;
   font-weight: 400;
   transition: all 0.3s ease;
 }
 nav li a:hover {
-  color: #666666;
+  color: #000000;
 }
 nav li {
   list-style: none;

@@ -113,6 +113,9 @@ a.btn-main {
   // -webkit-font-smoothing: antialiased;
   // -moz-osx-font-smoothing: grayscale;
   // box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .page-content {
@@ -157,13 +160,13 @@ nav {
     }
 
     a {
-      color: inherit;
+      color: lighten(@black, 50%);
       text-decoration: none;
       font-weight: 400;
       transition: all 0.3s ease;
 
       &:hover {
-        color: lighten(@black, 40%);
+        color: @black;
       }
     }
   }
