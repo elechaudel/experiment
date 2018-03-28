@@ -6,7 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,500|Source+Sans+Pro:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+  <script src="scroll.js"></script>
   <title>Geometrical Design in history.</title>
+  <meta name="description" content="A bunch of responsive Geometrical Artworks built in CSS.">
 </head>
 <body>
 
@@ -21,8 +25,8 @@
             <h2 class="logo">Geometrical Design in history</h2>
           </a>
           <!-- <ul>
-            <a class="js-anchor" href="#about"><li>About the project</li></a>
-            <a class="js-anchor" href="mailto:edgar@apart.lu?Subject=Hello"><li>Contact me</li></a>
+            <li><a class="js-anchor" href="#about">About the project</a></li>
+            <li><a class="js-anchor" href="mailto:edgar@apart.lu?Subject=Hello">Contact me</a></li>
           </ul> -->
         </nav>
       </div>
@@ -34,9 +38,9 @@
 
           <div class="content">
             <h1>A CSS experiment with Geometrical Design Artworks.</h1>
-            <p class="subtitle">I’ve been practicing CSS for some time but I really needed a project to train myself and push my skills forward. That’s why I decided to go over my favorite Geometrical Art Works and build them in responsive CSS from scratch. Enjoy!</p>
+            <p class="subtitle">I’ve been practicing CSS for some time but I really needed a project to train myself and push my skills forward. That’s why I decided to go over my favorite Geometrical Artworks and build them in responsive CSS from scratch. Enjoy!</p>
             <div class="btn-scroll">
-              <a href="#">See the experiments</a>
+              <a href="#first-artwork">See the experiments</a>
             </div>
           </div>
 
@@ -51,23 +55,36 @@
     </section>
   </div>
 
-<section class="artworks bg-white">
+<section class="artworks bg-white" id="first-artwork">
   <div class="container">
     <div class="artwork-block">
       <div class="content">
-        <div class="square-img" id="three-graces-img"></div>
+        <div class="square-img" id="three-graces-square"></div>
         <img src="assets/triangle-tg-red.svg" alt="" class="floating-shape sm-triangle">
         <img src="assets/circle-tg-blue.svg" alt="" class="floating-shape sm-circle">
         <h2>The three graces — Theo Van Doesburg, 1917</h2>
-        <p>Theo Van Doesburg is a Dutch artist who co-founded <i>De Stijl</i>, an artistic magazine promoting <i>Neoplasticism</i>, with related artists in 1917. More than a magazine <i>De Stijl</i> is also a movement in reaction to its opposite counterpart at that time: the <i>Modern Baroque</i>, an <i>Expressionist</i> movement. Artists from the <i>De Stijl</i> movement were favouring abstraction using simple shapes and primary colors over distorted shapes and ornementations. Rectangular forms, asymetry, opposition, straight lines, ... are the basic elements of every <i>Neoplastic Artwork</i>.</p>
-        <a href="https://codepen.io/elechaudel/full/ypoEYq/" class="btn-main" target="_blank">See the Interactive Artwork</a>
+        <p>Theo Van Doesburg is a Dutch artist who co-founded <i>De Stijl</i>, an artistic magazine promoting <i>Neoplasticism</i>, with related artists in 1917. More than a magazine, <i>De Stijl</i> is also a movement in reaction to its opposite counterpart at that time: the <i>Modern Baroque</i>, an <i>Expressionist</i> movement. Artists from the <i>De Stijl</i> movement were favouring abstraction using simple shapes and primary colors over distorted shapes and ornementations. Rectangular forms, asymetry, opposition, straight lines, ... are the basic elements of every <i>Neoplastic Artwork</i>.</p>
+        <a class="btn-main" href="https://codepen.io/elechaudel/full/ypoEYq/" target="_blank">See the Interactive Artwork</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="artwork-block">
+      <div class="content">
+        <div class="square-img" id="mondrian-square"></div>
+        <img src="assets/triangle-md-red.svg" alt="" class="floating-shape sm-triangle">
+        <img src="assets/circle-md-yellow.svg" alt="" class="floating-shape sm-circle">
+        <h2>Tableau I — Piet Mondrian, 1921</h2>
+        <p>Pieter Cornelis Mondriaan is a Dutch artist pioneer of 20th century <i>Abstract Art</i>, a movement born in the end of the 19th century using a visual language of shape, form, color and line. Mondrian was also a contributor to the famous <i>De Stijl</i> movement that he co-founded with Theo Van Doesburg. Mondrian's art vocabulary is focused on the three primary color (red, blue and yellow), the three primary value (black, white and gray) and the two primary directions (horizontal and vertical). His work evolved to even more minimalism along the years but <i>Tableau I</i> is a good representation of his unique touch in the 2Oth century art landscape.</p>
+        <a class="btn-main" href="https://codepen.io/elechaudel/full/NyYZaO/" target="_blank">See the Interactive Artwork</a>
       </div>
     </div>
   </div>
 </section>
 
-</div>
 
+</div>
 
 </body>
 </html>

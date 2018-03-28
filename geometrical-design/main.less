@@ -15,6 +15,12 @@ out:  ./main.css, sourcemap: false, compress: false
 @tg-red: #9C3023;
 @tg-blue: #172C5F;
 
+// Mondrian colors
+
+@md-red: #E21919;
+@md-blue: #0068B1;
+@md-yellow: #FADD37;
+
 // Fonts
 
 @source-sans: 'Source Sans Pro', sans-serif;
@@ -145,12 +151,20 @@ nav {
   font-size: 18px;
   font-weight: normal;
 
-  a {
-    color: inherit;
-    text-decoration: none;
-
+  li {
     &:not(:first-child) {
       margin-left: 40px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 400;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: lighten(@black, 40%);
+      }
     }
   }
 
@@ -352,27 +366,37 @@ section.artworks {
   }
 
   .square-img {
+    background-image: url(assets/artworks/three-graces.png);
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+    margin: auto;
+    margin-bottom: 60px;
+    position: relative;
 
-    &#three-graces-img {
-      background-image: url(assets/artworks/three-graces.png);
-      background-size: cover;
-      height: 250px;
-      width: 250px;
-      margin: auto;
-      margin-bottom: 60px;
-      position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: -12px;
+      top: -12px;
+      border: 12px solid black;
+      height: 100%;
+      width: 100%;
+      transform: rotate(-15deg);
+      animation: sm-square ease 30s infinite;
+    }
 
+    &#three-graces-square {
       &::before {
-        content: '';
-        position: absolute;
-        left: -12px;
-        top: -12px;
         border: 12px solid @tg-gold;
-        height: 100%;
-        width: 100%;
-        transform: rotate(-15deg);
-        animation: sm-square ease 30s infinite;
       }
+    }
+
+    &#mondrian-square {
+      background-image: url(assets/artworks/piet-mondrian.png);
+    }
+    &::before {
+      border: 12px solid @md-blue;
     }
   }
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="124px" height="124px" viewBox="0 0 124 124" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>circle-md-yellow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1127.000000, -44.000000)">
+        <path d="M1189,156 C1216.61424,156 1239,133.614237 1239,106 C1239,78.3857625 1216.61424,56 1189,56 C1161.38576,56 1139,78.3857625 1139,106 C1139,133.614237 1161.38576,156 1189,156 Z M1189,168 C1154.75835,168 1127,140.241654 1127,106 C1127,71.7583455 1154.75835,44 1189,44 C1223.24165,44 1251,71.7583455 1251,106 C1251,140.241654 1223.24165,168 1189,168 Z" id="circle-md-yellow" fill="#FADD39" fill-rule="nonzero" style="mix-blend-mode: multiply;"></path>
+    </g>
+</svg>
